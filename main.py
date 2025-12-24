@@ -6,10 +6,10 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 try:
     print("Cargando módulos...")
-    # Importamos el diseño del menú principal
+    
     from menus.menu_principal import mostrar_menu_principal
     
-    # IMPORTANTE: Debemos incluir el nombre de la carpeta 'actions.' antes del archivo
+    
     from actions.acciones_estudiantes import ejecutar_menu_estudiantes
     from actions.acciones_profesores import ejecutar_menu_profesores
     from actions.acciones_materias import ejecutar_menu_materias
@@ -28,7 +28,7 @@ except Exception as e:
 def main():
     while True:
         try:
-            # Limpiar pantalla
+          
             os.system("cls" if os.name == "nt" else "clear")
             
             mostrar_menu_principal()
